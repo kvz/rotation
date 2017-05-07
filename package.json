@@ -11,7 +11,10 @@
     "fix": "eslint . --fix",
     "lint": "eslint .",
     "build": "babel src --source-maps --out-dir lib",
-    "build:watch": "babel src --watch --source-maps --out-dir lib"
+    "build:watch": "babel src --watch --source-maps --out-dir lib",
+    "jest": "jest",
+    "test": "npm run lint && npm run jest",
+    "test:watch": "npm test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -24,7 +27,6 @@
   },
   "homepage": "https://github.com/kvz/rotation#readme",
   "devDependencies": {
-    "fakefile": "^0.0.8",
     "babel-cli": "6.24.1",
     "babel-core": "6.24.1",
     "babel-eslint": "7.2.3",
@@ -40,7 +42,9 @@
     "eslint-plugin-node": "^4.2.2",
     "eslint-plugin-promise": "3.5.0",
     "eslint-plugin-react": "6.10.3",
-    "eslint-plugin-standard": "3.0.1"
+    "eslint-plugin-standard": "3.0.1",
+    "fakefile": "^0.0.8",
+    "jest": "^20.0.0"
   },
   "dependencies": {}
 }
