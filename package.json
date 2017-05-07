@@ -1,6 +1,6 @@
 {
   "name": "rotation",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Generate filenames suitable for backup rotation",
   "main": "index.js",
   "scripts": {
