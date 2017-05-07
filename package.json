@@ -1,0 +1,24 @@
+{
+  "name": "rotation",
+  "version": "0.0.1",
+  "description": "Generate filenames suitable for backup rotation",
+  "main": "index.js",
+  "scripts": {
+    "release:major": "env SEMANTIC=major npm run release",
+    "release:minor": "env SEMANTIC=minor npm run release",
+    "release:patch": "env SEMANTIC=patch npm run release",
+    "release": "npm version ${SEMANTIC:-patch} -m \"Release %s\" && git push --tags && git push && npm publish",
+    "fix": "eslint . --fix",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kvz/rotation.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kvz/rotation/issues"
+  },
+  "homepage": "https://github.com/kvz/rotation#readme"
+}
