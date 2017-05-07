@@ -9,7 +9,9 @@
     "release:patch": "env SEMANTIC=patch npm run release",
     "release": "npm version ${SEMANTIC:-patch} -m \"Release %s\" && git push --tags && git push && npm publish",
     "fix": "eslint . --fix",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build": "babel src --source-maps --out-dir lib",
+    "build:watch": "babel src --watch --source-maps --out-dir lib"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,23 @@
   },
   "homepage": "https://github.com/kvz/rotation#readme",
   "devDependencies": {
-    "fakefile": "^0.0.8"
-  }
+    "fakefile": "^0.0.8",
+    "babel-cli": "6.24.1",
+    "babel-core": "6.24.1",
+    "babel-eslint": "7.2.3",
+    "babel-plugin-add-module-exports": "0.2.1",
+    "babel-plugin-es6-promise": "1.1.1",
+    "babel-plugin-syntax-async-functions": "6.13.0",
+    "babel-plugin-transform-async-to-generator": "6.24.1",
+    "babel-plugin-transform-object-assign": "6.22.0",
+    "babel-preset-es2015": "6.24.1",
+    "eslint": "3.19.0",
+    "eslint-config-standard": "10.2.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-react": "6.10.3",
+    "eslint-plugin-standard": "3.0.1"
+  },
+  "dependencies": {}
 }
