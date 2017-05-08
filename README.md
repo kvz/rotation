@@ -132,6 +132,11 @@ let s3target   = rotation({
 - When recovering a file, it's good if your storage platform can support sorting by modification date in descending order, so that you never overlook yesterday's backup if it happens to have been written as a `quarterly` backup.
 - [Rotation](https://github.com/kvz/rotation) does make backups, and does not not interface with storage or the outside world, it only generates a filename that you can use in your actual backups
 
+## Todo
+
+- Add Travis CI support
+- Add `--help` or similar for CLI users
+
 ## License
 
 MIT
