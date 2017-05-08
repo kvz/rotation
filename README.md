@@ -42,7 +42,7 @@ list of files:
 ./db-weekly-4.tar.gz            # contains a backup from: 2018-12-28
 ```
 
-Let's say your backups on average are `1GB`. With [Rotation](https://github.com/kvz/rotation)'s algorithm we only retain 26 files, consuming `26GB`. If we had written a new filename every day it would have been `(2 years x 365 days x 1GB) = 730GB`. So you realized a 2700% saving in storage costs, while maintaining the following retention properties:
+Let's say your backups on average are `10GB`. With [Rotation](https://github.com/kvz/rotation)'s algorithm we only retain 26 files over these two years of the above exampple. So we're consuming `260GB`. If we had written a new filename every day it would have been `(2 years x 365 days x 10GB) = 7300GB`. So you realized a 2700% saving in storage costs, while maintaining the following retention properties:
 
 | Up until      | You get to restore with a granularity of |
 |:--------------|:-----------------------------------------|
@@ -51,7 +51,7 @@ Let's say your backups on average are `1GB`. With [Rotation](https://github.com/
 | `1 year` ago  | ~`30 days`                               |
 | `>1 year` ago | ~`90 days`                               |
 
-In short, if something went wrong in February 2010 but you discover 7 years later :thinking:, you could access the backup from January 2010. If something went wrong today, you could access yesterday's backup.
+In short, if something went wrong in November 2010 but you discover 7 years later :thinking:, you could access the backup from September 1st 2010. If something went wrong today, you could access yesterday's backup.
 
 ## Install
 
