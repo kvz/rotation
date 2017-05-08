@@ -1,7 +1,8 @@
 [![Build Status](https://travis-ci.org/kvz/rotation.svg?branch=master)](https://travis-ci.org/kvz/rotation)
 
 # rotation
-Generate filenames suitable for backup rotation/re
+
+Generate backup filenames following a scheme that overwrites old files to save backup space, while offering ~infinte retention at the expense of granularity for older archives.
 
 ## Intro
 
@@ -11,8 +12,7 @@ A second way to combat that is to generate backup filenames that overwrite previ
 Sounds scary? Maybe. Yes. But so does automatically purging old archives. You decide. Here's how it works.
 
 If you had [Rotation](https://github.com/kvz/rotation) generate a filename for you every day, starting from `2017-01-01`, ending on `2019-01-01`,
-you end up with [this](https://github.com/kvz/rotation/blob/master/src/__snapshots__/rotation.test.js.snap#L4) 
-list of files:
+you'd end up with this list of files:
 
 ```bash
 ./db-daily-1-sunday.tar.gz      # contains a backup from: 2018-12-30
@@ -139,6 +139,14 @@ let s3target   = rotation({
 - [ ] Add `--help` or similar for CLI users
 - [ ] If you'd like to port this to another language, reach out and I'll add your project here.
 - [x] Add Travis CI support
+
+## Feedback
+
+- Welcome as [GitHub issues](https://github.com/kvz/rotation/issues/new)
+
+## Authors
+
+- [Kevin van Zonneveld](https://twitter.com/kvz)
 
 ## License
 
