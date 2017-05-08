@@ -1,6 +1,6 @@
 {
   "name": "rotation",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Generate filenames suitable for backup rotation",
   "bin": "lib/cli.js",
   "main": "lib/rotation.js",
