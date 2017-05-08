@@ -10,10 +10,10 @@ module.exports = function rotation (d = new Date(), opts = {}) {
     if (d.getUTCMonth() === 0) {
       ret.push('yearly', d.getUTCFullYear())
     } else {
-      ret.push(`monthly-${utcMonths[d.getUTCMonth()]}`)
+      ret.push('monthly', utcMonths[d.getUTCMonth()])
     }
   } else {
-    ret.push(`weekly-${utcWeekdays[d.getUTCDay()]}`) // 0 = sunday
+    ret.push('weekly', utcWeekdays[d.getUTCDay()])
   }
 
   return ret.join('-')
