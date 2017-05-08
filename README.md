@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/kvz/rotation.svg?branch=master)](https://travis-ci.org/kvz/rotation)
+
 # rotation
 Generate filenames suitable for backup rotation/re
 
