@@ -55,7 +55,7 @@ In short, if something went wrong in November 2010 but you discover 7 years late
 
 ## Install
 
-If you intend to use on the CLI:
+If you intend to use on the CLI (in shell scripts):
 
 ```bash
 npm install rotation --global
@@ -134,8 +134,9 @@ let s3target   = rotation({
 
 ## Todo
 
-- Add Travis CI support
-- Add `--help` or similar for CLI users
+- [ ] Add `--help` or similar for CLI users
+- [ ] If you'd like to port this to another language, reach out and I'll add your project here.
+- [x] Add Travis CI support
 
 ## License
 
