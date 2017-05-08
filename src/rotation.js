@@ -10,15 +10,12 @@ module.exports = function rotation (d = new Date(), opts = {}) {
   if (d.getUTCDate() === 1) {
     // between 0 and 11
     if (d.getUTCMonth() === 0) {
-      ret.push(zeropad(d.getUTCFullYear(), 4))
+      ret.push(`yearly-${zeropad(d.getUTCFullYear(), 4)}`)
+    } else {
+      ret.push(`monthly-${utcMonths[d.getUTCMonth()]}`)
     }
-
-    // ret.push(zeropad(d.getUTCMonth() + 1), 2)
-    ret.push(utcMonths[d.getUTCMonth()])
-  }
-
-  if (!ret.length) {
-    ret.push(utcWeekdays[d.getUTCDay()]) // 0 = sunday
+  } else {
+    ret.push(`weekly-${utcWeekdays[d.getUTCDay()]}`) // 0 = sunday
   }
 
   return ret.join('-')
