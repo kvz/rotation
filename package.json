@@ -2,7 +2,11 @@
   "name": "rotation",
   "version": "0.0.2",
   "description": "Generate filenames suitable for backup rotation",
-  "main": "rotation.js",
+  "bin": "lib/cli.js",
+  "main": "lib/rotation.js",
+  "files": [
+    "lib/"
+  ],
   "scripts": {
     "release:major": "env SEMANTIC=major npm run release",
     "release:minor": "env SEMANTIC=minor npm run release",

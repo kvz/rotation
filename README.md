@@ -8,8 +8,8 @@ gets expensive. One way to combat that is to expire old archives, perhaps via so
 A second way to combat that is to generate backup filenames that overwrite previous archives. 
 Sounds scary? Maybe. Yes. But so does automatically purging old archives. You decide. Here's how it works.
 
-If you had Rotation generate a filename for you every day, starting from 2017-01-01, ending on 2019-01-01,
-you' end up with [this](https://github.com/kvz/rotation/blob/master/src/__snapshots__/rotation.test.js.snap#L4) 
+If you had Rotation generate a filename for you every day, starting from `2017-01-01`, ending on `2019-01-01`,
+you end up with [this](https://github.com/kvz/rotation/blob/master/src/__snapshots__/rotation.test.js.snap#L4) 
 list of files:
 
 ```bash
