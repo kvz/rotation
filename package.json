@@ -2,7 +2,7 @@
   "name": "rotation",
   "version": "0.0.2",
   "description": "Generate filenames suitable for backup rotation",
-  "main": "index.js",
+  "main": "rotation.js",
   "scripts": {
     "release:major": "env SEMANTIC=major npm run release",
     "release:minor": "env SEMANTIC=minor npm run release",
@@ -13,6 +13,7 @@
     "build": "babel src --source-maps --out-dir lib",
     "build:watch": "babel src --watch --source-maps --out-dir lib",
     "jest": "jest",
+    "jest:update": "jest -u",
     "test": "npm run lint && npm run jest",
     "test:watch": "npm test -- --watch"
   },
