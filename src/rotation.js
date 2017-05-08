@@ -3,7 +3,7 @@ const utcMonths = ['january', 'february', 'march', 'april', 'may', 'june', 'july
 const zeropad = require('./zeropad')
 
 module.exports = function rotation (opts = {}) {
-  if (!opts.date) {
+  if (!('date' in opts)) {
     opts.date = new Date()
   }
   if (opts.date === `${opts.date}`) {
@@ -21,15 +21,15 @@ module.exports = function rotation (opts = {}) {
     // if (opts.date.getUTCMonth() === 0) {
     //   ret.push('yearly', opts.date.getUTCFullYear())
     // } else
-    if ((opts.date.getUTCMonth() + 1) % 4 === 0) {
-      ret.push('quarterly', opts.date.getUTCFullYear(), Math.floor(opts.date.getUTCMonth() / 4))
+    if ((opts.date.getUTCMonth() + 1) % 3 === 0) {
+      ret.push('quarterly', opts.date.getUTCFullYear(), Math.floor(opts.date.getUTCMonth() / 3) + 1)
     } else {
       ret.push('monthly', zeropad(opts.date.getUTCMonth() + 1, 2), utcMonths[opts.date.getUTCMonth()])
     }
   } else if (opts.date.getUTCDate() % 7 === 0) {
     ret.push('weekly', Math.floor(opts.date.getUTCDate() / 7))
   } else {
-    ret.push('daily', opts.date.getUTCDay(), utcWeekdays[opts.date.getUTCDay()])
+    ret.push('daily', opts.date.getUTCDay() + 1, utcWeekdays[opts.date.getUTCDay()])
   }
 
   return opts.prefix + ret.join('-') + opts.suffix

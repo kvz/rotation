@@ -6,7 +6,7 @@ describe('rotation', () => {
     const files = {}
     for (let i = 1483232461; i <= 1546304461; i = i + 86400) {
       let dateJs      = new Date(i * 1000)
-      let filename    = rotation(dateJs)
+      let filename    = rotation({ date: dateJs })
       let dateIso     = isodate(dateJs)
       files[filename] = dateIso
     }
